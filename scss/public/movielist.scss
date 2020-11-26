@@ -1,0 +1,136 @@
+@import './valiabale.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Marvel:wght@400;700&family=Oswald:wght@200;300;500;600;700&display=swap');
+@mixin styleMovieList ($colunm){
+    .movielist{
+        max-width: 640px;
+        .movielist-top{
+            
+            padding-bottom: 1rem;
+            padding-top: 2rem;
+            background: url(../img/divider_line.gif) bottom repeat-x;
+            @include displayFlex(space-between , center , false);
+
+           h1{
+            display: inline-block;
+            font-family: 'Oswald', sans-serif;
+            color: rgb(218,203,70);
+            text-transform: uppercase;
+            font-size: 1.7rem;
+            margin-right: auto;
+          }
+          a{
+
+              font-size: .8rem;
+              color: $color-text-main !important;
+              text-transform: capitalize;
+
+          }
+        }
+        &-content{
+           @include displayFlex(space-between , center , false);
+           width: 100%;
+           flex-wrap: wrap;
+            &-movie{
+                background:  rgba(0,0,0,0.8);;
+                padding: .1rem;
+                position: relative;
+            color: $color-text-main;
+            width: (100%/$colunm);
+            height: 270px;
+            margin: .4rem .2rem;
+            box-sizing: border-box;
+            background-size: cover;
+            box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.4), 1px 1px 0 rgba(255, 255, 255, 0.15);
+            @include displayFlex(space-between, start , true);
+            &-img{
+                width: 98%;
+                height: 77%;
+                position: absolute !important;
+                z-index: 0;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+                :hover{
+                    background: rgba(0, 0, 0, 0.4);
+                }
+            }
+            &-top{
+                color: #fff;
+                background: #A21D0A;
+                font-size: 11px;
+                font-weight: bold;
+                clear: both;
+                padding: 4px;
+                text-shadow: 1px 1px 2px #111;
+                margin-top: .6rem;
+                left: 2px;
+                top: 5px;
+                white-space: nowrap;
+                position: relative;
+                display: inline-block;
+                -webkit-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.75);
+                -moz-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.75);
+                box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.75);
+                &::before{
+                    content: "";
+                    float: right;
+                    position: absolute;
+                    top: 0;
+                    right: -12px;
+                    width: 0;
+                    height: 0;
+                    border-color: transparent transparent transparent #A21D0A;
+                    border-style: solid;
+                    border-width: 8px 0 12px 12px;
+                }
+            }
+            &-infor{
+                z-index: 1;
+                height: 26%;
+                bottom: 2px;
+            background: rgba(0,0,0,0.8);
+            padding: 5px;
+            width: 100%;
+            .movie-name-1 {
+                display: block;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                width: 100%;
+                color: rgb(68,226,219);
+                text-transform: uppercase;
+                font-size: 14px;
+                font-weight: 700;
+                text-decoration: none;
+                margin:  8px 0;
+                &:hover{
+                    color: $color-hover-text-main;
+                }
+            }
+            .movie-name-2 {
+                color: #fff;
+                font-size: 12px;
+                display: block;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                width: 100%;
+                text-decoration: none;
+                margin: 5px 0px;
+            }
+            h2{
+                    color: #666;
+                    padding-top: 5px;
+                    text-transform: capitalize;
+                    font-size: .65rem;
+                
+            }
+            }
+            }
+           
+        }
+    }
+}
+    

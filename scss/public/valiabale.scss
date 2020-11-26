@@ -1,0 +1,27 @@
+
+// valiable
+$color-main : rgb(58,57,62);
+$color-navbar-bg : rgb(50,48,49);
+$color-text-main : #ffff;
+$color-navbar-sub-hover : rgb(29, 27, 27);
+$color-hover-text-main :rgb(218,203,70);
+// mixin
+ @mixin displayFlex($jus , $alg , $colunm : true ) {
+     display: flex;
+     justify-content: $jus;
+     align-items: $alg;
+     @if($colunm ==  true ){
+         flex-direction: column;
+     }
+     @else{
+         flex-direction: row;
+     }
+     flex-wrap: nowrap;
+ }
+ @mixin  backgroundImg ($url){
+     background-image: url($url);
+     background-position: center;
+     background-size: cover;
+     background-repeat: no-repeat;
+ }
+

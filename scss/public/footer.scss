@@ -1,0 +1,58 @@
+@import './valiabale.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Marvel:wght@400;700&family=Oswald:wght@200;300;500;600;700&display=swap');
+
+@mixin styleFooter {
+    
+.footer{
+    width: 100%;
+    border-top: 3px solid rgb(201,191,70);
+    padding: 2rem 0;
+    background: url(../img/micro_carbon.png);
+    .container{
+       max-width: 1000px;
+       @include displayFlex(space-between , start , false);
+       margin: 0 auto;
+    }
+    &-logo{
+        display: inline-block;
+        width: 260px;
+        height: 55px;
+    }
+    &-link{
+        @include displayFlex(space-between  , start , flase);
+        & > div{
+        padding: 0 2rem;
+        h1{
+            display: inline-block;
+            font-family: 'Oswald', sans-serif;
+            color: rgb(68,226,219);
+            text-transform: uppercase;
+            font-size: 1.4rem;
+            margin-right: auto;
+            margin-bottom: 1.1rem;
+            &:hover{
+                color: $color-hover-text-main;
+            }
+        }
+        a{
+            display: block;
+            color: $color-text-main;
+            text-transform: capitalize;
+            margin: .7rem 0 ;
+            font-size: .7rem;
+        }         
+    }
+    }
+    &-contact { 
+        color: $color-text-main;
+        font-size: .8rem;
+         & > *{
+             display: block;
+             margin: .7rem 0;
+             text-transform: capitalize;
+         }
+    }
+}
+
+}
