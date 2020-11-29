@@ -73,7 +73,7 @@ body{
         // width: 670px;
         height: 300px;
         margin: 0 .6rem;
-        background: url(../img//poster.small.jpg)   no-repeat ;
+        background: url(../img/poster.small.jpg)   no-repeat ;
         background-size: cover;
         @include displayFlex(space-between , start , true);
         &-status{

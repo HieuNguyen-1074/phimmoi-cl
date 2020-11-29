@@ -8,7 +8,7 @@
     width: 100%;
     border-top: 3px solid rgb(201,191,70);
     padding: 2rem 0;
-    background: url(../img/micro_carbon.png);
+    background: url(../../img/micro_carbon.png);
     .container{
        max-width: 1000px;
        @include displayFlex(space-between , start , false);
